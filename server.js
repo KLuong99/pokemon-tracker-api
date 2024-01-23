@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
-const uri = process.env.MONGODB_URI
 const PORT = 8000
 require('dotenv').config()
 
@@ -67,6 +66,6 @@ app.delete('/deletePokemon', (request, response) => {
 
 })
 
-app.listen(process.env.MONGODB_URI || PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
