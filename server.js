@@ -67,6 +67,6 @@ app.delete('/deletePokemon', (request, response) => {
 
 })
 
-app.listen(process.env.PORT || PORT, ()=>{
+app.listen(process.env.MONGODB_URI || PORT, ()=>{
     console.log(`Server running on port ${PORT}`)
 })
